@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# React Native Component Learning Project
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is my learning project where I am building React Native components and experimenting with different patterns. I am using Expo and React Native to understand how forms work and how to improve them step by step.
 
-## Get started
+## What I Am Learning
 
-1. Install dependencies
+I started with basic signup forms and kept upgrading them as I learned new techniques. Each version of the signup form shows my progress in understanding form validation and user experience.
 
-   ```bash
-   npm install
-   ```
+### Signup Form Progress
 
-2. Start the app
+signup1 - This is my first attempt at building a signup form. I learned how to collect user input like name email password phone and date of birth. I added basic validation by checking lengths and making sure passwords match. I also added a checkbox for terms and conditions. The submit button only works when all fields are valid.
 
-   ```bash
-   npx expo start
-   ```
+signup2 - In this version I learned about showing error messages to users. I added touched state to track which fields the user has interacted with. Now errors only show up after you leave a field not while you are still typing. This makes the form feel less annoying. I also learned to calculate whether the button should be enabled based on whether there are any errors.
 
-In the output, you'll find options to open the app in a
+signup3 - This is where things got more interesting. I learned about debouncing which means waiting a bit before checking things like username availability or email validation. I created a custom useDebounce hook that delays the validation. I also learned regex for proper email validation. I added loading indicators so users know when the app is checking if their username is taken. I made the form smarter by knowing which fields are required and which are optional.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+signup4 - This is the most advanced version. I learned about keyboard handling in React Native using KeyboardAvoidingView and ScrollView so the keyboard does not cover input fields. I added refs to move focus between fields when you press return on the keyboard. I also added password visibility toggle buttons so you can see what you typed. The form feels much more polished now with better user experience.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Other Things I Built
 
-## Get a fresh project
+I also created a useDebounce hook in the Hooks folder which I use to delay expensive operations like checking username availability or validating emails. This prevents making too many checks while the user is still typing.
 
-When you're ready, run:
+I set up types for the signup form data to make sure I use the right structure everywhere.
+
+I created a common header component and a screen list component for the home screen to keep things organized.
+
+## How to Run
+
+Install dependencies first
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Start the development server
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Then you can open the app on your phone with Expo Go or run it in an iOS simulator or Android emulator.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## What I Am Doing Next
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+I want to keep learning more about forms and might add things like date pickers file uploads or multi step forms. I am just experimenting and seeing what I can build.
