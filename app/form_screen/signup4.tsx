@@ -16,6 +16,7 @@ import {
 export default function SignUp4() {
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleCon, setIsVisibleCon] = useState(false);
+  const [isloading, setIsLoading] = useState(false);
   const usernameRef = useRef<TextInput>(null);
   const emailRef = useRef<TextInput>(null);
   const passwordRef = useRef<TextInput>(null);
@@ -68,7 +69,16 @@ export default function SignUp4() {
         ? "Both should match"
         : "",
   };
-  // not making button here as it will be same as in signup3 form 
+  const enableButton =
+    !errors.name &&
+    !errors.username &&
+    !errors.email &&
+    !errors.password &&
+    !errors.confirmpassword &&
+    form.checkbox &&
+    form.name &&
+    form.username &&
+    form.email;
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -210,6 +220,38 @@ export default function SignUp4() {
           {touched.confirmPassword && errors.confirmpassword && (
             <Text style={styles.errorText}>{errors.confirmpassword}</Text>
           )}
+          <View style={styles.term}>
+            <Pressable
+              onPress={() =>
+                setForm((prev) => ({ ...prev, checkbox: !prev.checkbox }))
+              }
+            >
+              <MaterialIcons
+                style={styles.icon}
+                size={24}
+                name={form.checkbox ? "check-box" : "check-box-outline-blank"}
+              />
+            </Pressable>
+            <Text>accepting the term</Text>
+          </View>
+          <Pressable
+            onPress={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                console.log("pressed");
+                setIsLoading(false);
+              }, 900);
+            }}
+            disabled={!enableButton}
+            style={[
+              styles.submitButton,
+              enableButton
+                ? { backgroundColor: "#16BE48" }
+                : { backgroundColor: "#DAA6A6" },
+            ]}
+          >
+            {isloading ? <ActivityIndicator /> : <Text>Submit</Text>}
+          </Pressable>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -249,5 +291,18 @@ const styles = StyleSheet.create({
     top: "50%",
     transform: [{ translateY: -12 }],
   },
-
+  submitButton: {
+    width: "100%",
+    borderRadius: 12,
+    alignItems: "center",
+    marginVertical: 12,
+    paddingVertical: 12,
+  },
+  term: {
+    marginTop: 12,
+    flexDirection: "row",
+  },
+  icon: {
+    marginRight: 6,
+  },
 });
