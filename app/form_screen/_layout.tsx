@@ -4,22 +4,67 @@ import React from "react";
 
 export default function ScreenLayout() {
   return (
-    <Stack
-      screenOptions={{
-        header: ({ navigation }) => (
-          <AppHeader
-            title={"Lists"}
-            ishome={false}
-            onBackPress={navigation.goBack}
-          />
-        ),
-      }}
-    >
-      <Stack.Screen name="signup1" />
-      <Stack.Screen name="signup2" />
-      <Stack.Screen name="signup3" />
-      <Stack.Screen name="signup4" />
-      <Stack.Screen name="signup5" />
+    <Stack>
+      <Stack.Screen
+        name="signup1"
+        options={{
+          header: ({ navigation }) => (
+            <AppHeader
+              title={"SignUp"}
+              ishome={false}
+              onBackPress={navigation.goBack}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="signup2"
+        options={{
+          header: ({ navigation }) => (
+            <AppHeader
+              title={"SignUp"}
+              ishome={false}
+              onBackPress={navigation.goBack}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="signup3"
+        options={{
+          header: ({ navigation }) => (
+            <AppHeader
+              title={"SignUp"}
+              ishome={false}
+              onBackPress={navigation.goBack}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="signup4"
+        options={{
+          header: ({ navigation }) => (
+            <AppHeader
+              title={"SignUp"}
+              ishome={false}
+              onBackPress={navigation.goBack}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="signup5"
+        options={{
+          header: ({ navigation }) => (
+            <AppHeader
+              title={"SignUp"}
+              ishome={false}
+              onBackPress={navigation.goBack}
+            />
+          ),
+        }}
+      />
     </Stack>
   );
 }

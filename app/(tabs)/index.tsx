@@ -31,8 +31,13 @@ const ScreensJson = [
   },
   {
     id: 6,
-    name: "Simple list only rendring data",
+    name: "Paginated item rendring in a flatlist",
     link: "/list_screen/list2",
+  },
+  {
+   id: 7,
+    name: "Added search functionality in flatlist",
+    link: "/list_screen/list3",
   },
 ];
 
@@ -46,7 +51,7 @@ export default function HomeScreen() {
           <ScreenList name={item.name} link={item.link as RelativePathString} />
         )}
       />
-    </View>
+    </View> 
   );
 }
 

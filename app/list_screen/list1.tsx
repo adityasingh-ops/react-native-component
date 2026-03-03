@@ -18,7 +18,7 @@ export default function list1() {
       /> 
     </View>
   );
-}
+} 
 
 const styles = StyleSheet.create({
   mainView: {

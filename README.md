@@ -30,6 +30,7 @@ list 1 - This is my first attempt of fetching product and displaying it with the
 
 list 2 - In this screen i updated previous version i explored more properties of flatlist like refreshing , onEndReachThreshold, onEndReach this help us in pagination of the item i have two state from the api (useProduct) first i manage hasMore and second is refresing where i set the offSet according to that and with hasMore we finally reach end of the list without getting stuck in a loop
 
+list 3 - Here i implemented the search feature with debounce of 900 and fade the list when its loading
 
 ### Other Things I Built For FlatList 
 

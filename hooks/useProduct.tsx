@@ -22,7 +22,7 @@ export default function useProduct() {
         setOffSet((prev) => prev + limit)
       }else{
         setData(data);
-        setOffSet((prev) => prev + limit)
+        setOffSet(limit)
       }
     } catch (error) {
       console.log(error);

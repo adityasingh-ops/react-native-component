@@ -3,7 +3,7 @@ import useProduct from "@/Hooks/useProduct";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  FlatList,
+  FlatList, 
   StyleSheet,
   Text,
   View,
@@ -14,17 +14,17 @@ export default function list2() {
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, []);   
   const handleRefresh = () => {
     setIsRefreshing(true);
     fetchProduct(true)
     setTimeout(() => {
-      setIsRefreshing(false);
+      setIsRefreshing(false);   
     }, 900);
   };
-  return (
+  return (  
     <View style={styles.mainView}>
-      <Text style={styles.mainText}>FlatList</Text>
+      <Text style={styles.mainText}>FlatList2</Text>
         <FlatList
           data={data}
           keyExtractor={(item) => item.id.toString()}
@@ -34,12 +34,12 @@ export default function list2() {
           onEndReachedThreshold={0.3}
           onEndReached={() => {
             !isLoading && hasMore && fetchProduct();
-          }}
-          ListFooterComponent={isLoading ? <ActivityIndicator /> : null}
+          }} 
+          ListFooterComponent={isLoading ? <ActivityIndicator /> : null} 
         />
     </View>
   );
-}
+} 
 
 const styles = StyleSheet.create({
   mainView: {
