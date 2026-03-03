@@ -25,12 +25,15 @@ I set up types for the signup form data to make sure I use the right structure e
 I created a common header component and a screen list component for the home screen to keep things organized.
 
 ### FlatList Progress
-list 1 - This is my first attempt of fetching product and displaying it with the help of flat list here i used three properties of flatlist which is required no other feature first one is data where we put data we want to render it should be a list and then we have key extractor which help uniquely identify each item and then renderItem in which we draw the ui
+
+list 1 - This is my first attempt of fetching product and displaying it with the help of flat list here i used three properties of flatlist which is required no other feature first one is data where we put data we want to render it should be a list and then we have key extractor which help uniquely identify each item and then renderItem in which we draw the ui.
+
+list 2 - In this screen i updated previous version i explored more properties of flatlist like refreshing , onEndReachThreshold, onEndReach this help us in pagination of the item i have two state from the api (useProduct) first i manage hasMore and second is refresing where i set the offSet according to that and with hasMore we finally reach end of the list without getting stuck in a loop
 
 
 ### Other Things I Built For FlatList 
 
-I also created useProduct where i fetch products form an mock api and stroring the product in a state and also keep the status of loading.
+I also created useProduct where i fetch products form an mock api and stroring the product in a state and also keep the status of loading and also two more like hasMore in the list isRefreshing and offSet for pagination.
 
 I set up types for the product to make sure I use the right structure everywhere.
 

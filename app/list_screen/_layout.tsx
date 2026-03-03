@@ -16,6 +16,7 @@ export default function ListLayout() {
       }}
     >
       <Stack.Screen name="list1" options={{ title: "list1" }} />
+      <Stack.Screen name="list2" options={{ title: "list2" }} />
     </Stack>
   );
 }

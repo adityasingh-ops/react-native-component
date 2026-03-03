@@ -6,7 +6,7 @@ export default function ScreenList({name, link}: ScreenListType) {
     const router = useRouter();
   return (
     <Pressable
-    onPress={()=> router.navigate(link)}
+    onPress={()=> router.push(link)}
      style={styles.mainView}>
       <Text>{name}</Text>
     </Pressable>

@@ -14,8 +14,8 @@ export default function list1() {
       <FlatList
         data={data}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item, index }) => <ProductList item={item} />}
-      />
+        renderItem={({ item, index }) => <ProductList item={item} />}    
+      /> 
     </View>
   );
 }

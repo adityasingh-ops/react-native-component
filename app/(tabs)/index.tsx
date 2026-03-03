@@ -29,6 +29,11 @@ const ScreensJson = [
     name: "Simple list only rendring data",
     link: "/list_screen/list1",
   },
+  {
+    id: 6,
+    name: "Simple list only rendring data",
+    link: "/list_screen/list2",
+  },
 ];
 
 export default function HomeScreen() {
