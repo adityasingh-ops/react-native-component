@@ -16,13 +16,28 @@ signup3 - This is where things got more interesting. I learned about debouncing 
 
 signup4 - This is the most advanced version. I learned about keyboard handling in React Native using KeyboardAvoidingView and ScrollView so the keyboard does not cover input fields. I added refs to move focus between fields when you press return on the keyboard. I also added password visibility toggle buttons so you can see what you typed. The form feels much more polished now with better user experience.
 
-### Other Things I Built
+### Other Things I Built For Form
 
 I also created a useDebounce hook in the Hooks folder which I use to delay expensive operations like checking username availability or validating emails. This prevents making too many checks while the user is still typing.
 
 I set up types for the signup form data to make sure I use the right structure everywhere.
 
 I created a common header component and a screen list component for the home screen to keep things organized.
+
+### FlatList Progress
+list 1 - This is my first attempt of fetching product and displaying it with the help of flat list here i used three properties of flatlist which is required no other feature first one is data where we put data we want to render it should be a list and then we have key extractor which help uniquely identify each item and then renderItem in which we draw the ui
+
+
+### Other Things I Built For FlatList 
+
+I also created useProduct where i fetch products form an mock api and stroring the product in a state and also keep the status of loading.
+
+I set up types for the product to make sure I use the right structure everywhere.
+
+I created ProductList so that i can reuse the component 
+
+
+
 
 ## How to Run
 

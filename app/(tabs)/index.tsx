@@ -24,6 +24,11 @@ const ScreensJson = [
     name: "SignUp Form with good ux and microinteraction",
     link: "/form_screen/signup4",
   },
+  {
+    id: 5,
+    name: "Simple list only rendring data",
+    link: "/list_screen/list1",
+  },
 ];
 
 export default function HomeScreen() {

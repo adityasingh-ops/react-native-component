@@ -1,15 +1,17 @@
 import { Header } from "@/types/app_header";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { useNavigation } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-export default function AppHeader({ title, ishome }: Header) {
-  const router = useNavigation();
+export default function AppHeader({
+  title,
+  ishome,
+  onBackPress,
+}: Header & { onBackPress?: () => void }) {
   return (
     <View style={styles.headerStyle}>
-      {ishome && (
+      {!ishome && (
         <MaterialIcons
-          onPress={() => router.goBack()}
+          onPress={onBackPress}
           style={styles.icon}
           name="arrow-back-ios-new"
           size={22}

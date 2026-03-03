@@ -1,26 +1,21 @@
-import React from 'react'
-import { Tabs } from 'expo-router'
-import MaterialIcons from '@expo/vector-icons/MaterialIcons'
-import AppHeader from '@/components/common/header'
+import AppHeader from "@/components/common/header";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Tabs } from "expo-router";
+import React from "react";
 
 export default function TabLayout() {
   return (
-    <Tabs
-    >
-        <Tabs.Screen
-        name='index'
+    <Tabs>
+      <Tabs.Screen
+        name="index"
         options={{
-            title:'home',
-            tabBarIcon:({color}) => <MaterialIcons name='home' size={28} color={color}/>,
-            header:()=><AppHeader title={"Home"}/>
+          title: "home",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="home" size={28} color={color} />
+          ),
+          header: () => <AppHeader title={"Home"} ishome={true} />,
         }}
-        />
-        <Tabs.Screen
-        name='examples'
-        options={{
-            tabBarIcon: ({color}) => <MaterialIcons name='book' size={28} color={color}/>
-        }}
-        />
+      />
     </Tabs>
-  )
+  );
 }

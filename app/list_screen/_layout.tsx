@@ -2,7 +2,7 @@ import AppHeader from "@/components/common/header";
 import { Stack } from "expo-router";
 import React from "react";
 
-export default function ScreenLayout() {
+export default function ListLayout() {
   return (
     <Stack
       screenOptions={{
@@ -15,11 +15,7 @@ export default function ScreenLayout() {
         ),
       }}
     >
-      <Stack.Screen name="signup1" />
-      <Stack.Screen name="signup2" />
-      <Stack.Screen name="signup3" />
-      <Stack.Screen name="signup4" />
-      <Stack.Screen name="signup5" />
+      <Stack.Screen name="list1" options={{ title: "list1" }} />
     </Stack>
   );
 }
